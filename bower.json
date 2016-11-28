@@ -1,0 +1,23 @@
+{
+  "name": "blackbelt",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Gideon Lee <Gideonxlee@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.9",
+    "angular-route": "^1.5.9",
+    "angular-flash-alert": "^2.4.0",
+    "angular-cookies": "^1.5.9"
+  }
+}

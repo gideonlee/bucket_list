@@ -1,0 +1,18 @@
+<div class='header'>
+	<h3 class='inline'>Bucket List</h3>
+	<a href='#/dashboard'>Home</a>
+	<button ng-click='logout()'>Logout</button>
+</div>
+
+<h2>{{user.name}}'s Bucket List</h2>
+
+<h4>Done</h4>
+<div ng-repeat='event in completed'>
+	<span>{{event._creator.name}} | {{event.title}} - {{event.description}} - {{event.createdAt.substring(5, 7)}}/{{event.createdAt.substring(8, 10)}}/{{event.createdAt.substring(0, 4)}}</span>
+</div>
+
+<h4>Pending</h4>
+<div ng-repeat='event in pending'>
+
+	<span>{{event._creator.name}} | {{event.title}} - {{event.description}} - {{event.createdAt.substring(5, 7)}}/{{event.createdAt.substring(8, 10)}}/{{event.createdAt.substring(0, 4)}}</span>
+</div>

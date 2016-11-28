@@ -1,0 +1,32 @@
+* {
+	/*outline: 2px solid black;*/
+	margin: 0 auto;
+	padding: 0;
+}
+.inline {
+	display: inline-block;
+}
+.block {
+	display: block;
+}
+	.header h3, .header a, .header button {
+		margin-left: 20px;
+	}
+	.header a {
+		color: blue;
+	}
+	.header button {
+		outline: none;
+		background: none;
+		color: blue;
+		border: none;
+	}
+		.header button:hover {
+			text-decoration: underline;
+		}
+	form select {
+		width: 200px;
+	}
+h4 {
+	margin-top: 30px;
+}

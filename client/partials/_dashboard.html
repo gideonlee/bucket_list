@@ -1,0 +1,27 @@
+<div class='header'>
+	<h3 class='inline'>Bucket List</h3>
+	<a href='#/dashboard'>Home</a>
+	<button ng-click='logout()'>Logout</button>
+</div>
+
+<h1>Welcome, {{user.name}}!</h1>
+<form>
+	<input type='text' placeholder='Title' ng-model='event.title'>
+	<input type='text' placeholder='Description' ng-model='event.description'>
+	<select ng-model='event.tagged'>
+		<option ng-repeat='otherUser in otherUsers'>{{otherUser.name}}</option>
+	</select>
+	<input class='btn btn-default' type='submit' value='Add to List' ng-click='addEvent()'>
+</form>
+
+<h4>Before I die I want to: </h4>
+<div ng-repeat='event in user._events'>
+	<input type='checkbox' ng-model='event.completed' ng-click='completed(event)'>
+	<span>{{event._creator.name}} | {{event.title}} - {{event.description}} - {{event.createdAt.substring(5, 7)}}/{{event.createdAt.substring(8, 10)}}/{{event.createdAt.substring(0, 4)}}</span>
+</div>
+
+
+<h4>List of other users (Click to view profile)</h4>
+<div class='block' ng-repeat='otherUser in otherUsers'>
+	<a href='#/user/{{otherUser._id}}'>{{otherUser.name}}</a>
+</div>
